@@ -7,6 +7,13 @@
 
 	TreeSet<Integer> lotto = new TreeSet<>();	
 	TreeSet<Integer> lotto2 = new TreeSet<>();
+	
+/* 	Set<Integer> set = new HashSet<>();
+	Random ran = new Random();
+	
+	while(set.size()<6) {
+		set.add(ran.nextInt(45)+1);
+	} */
 
 %>
 
@@ -18,6 +25,13 @@
 </head>
 <body>
 
+	<%-- 	 
+	금주의 로또번호: <%= set.toString() %>
+	
+	<% for(int a : set) {%>
+		<%= a %>
+	<% } %>
+	--%>
 
 	<% while(lotto.size()<6) {
 	  int num = (int)(Math.random()*45)+1;
