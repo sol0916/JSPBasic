@@ -20,12 +20,15 @@
 	<!-- a태그 사용해서 DemoServlet으로 절대경로 -->
 	
 	<a href="../../banana">DemoServlet(상대경로)</a>
-	<a href="/JSPBasic/banana">DemoServlet(절대경로)</a>
+	<a href="<%=request.getContextPath()%>/banana">DemoServlet(절대경로)</a>
 	
 	<br>
 	
 	<!-- jsptag폴더 밑에 있는 이미지를 띄워주세요. img태그로 -->
 	<img src="../../jsptag/포차코.png"></a>
+	
+	
+	<!-- contextPath = 톰캣이 프로젝트를 구분하는 경로 -->
 	
 
 </body>
