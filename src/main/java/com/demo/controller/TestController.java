@@ -27,10 +27,30 @@ public class TestController extends HttpServlet {
 	//2. get/post 요청을 하나로 모음
 	protected void doAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String uri = request.getRequestURI();
-		System.out.println("요청URI:"+uri);
+		//3. 요청분기...
+		//한글처리
+		request.setCharacterEncoding("UTF-8");
 		
-		//3. 요청분기... 내일 ^^
+		String uri = request.getRequestURI();
+		String conPath = request.getContextPath();		
+		String command = uri.substring(conPath.length());
+		
+		
+		//System.out.println("요청URI:"+uri);
+		System.out.println(command);
+		
+		
+		if(command.equals("/controller/add.test")) {
+			
+			//..회원추가기능..
+			
+		} else if(command.equals("/controller/login.test")) {
+			
+			//..회원로그인기능..
+			
+		} 
+		//생략..
+		
 		
 	}
 
